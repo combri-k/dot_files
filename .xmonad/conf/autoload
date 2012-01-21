@@ -1,0 +1,4 @@
+feh --bg-scale ~/.xmonad/wall/haskell-pink.png &
+~/.xmonad/bin/wallroller ~/.xmonad/wall &
+#urxvtd -q -f -o &
+#xcompmgr &

@@ -1,0 +1,17 @@
+Config { font = "-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*"
+       , bgColor = "#101010"
+       , fgColor = "#f92672"
+       , position = Top
+       , lowerOnStart = True
+       , commands = [ Run Weather "LFPO" ["-t","Meanwhile: <tempC>°C","-L","18","-H","25","--normal","#56c2d6","--high","#56c2d6","--low","#56c2d6"] 36000
+                    , Run Network "eth0" ["-L","0","-H","32","--normal","#56c2d6","--high","#56c2d6"] 10
+                    , Run Cpu ["-L","3","-H","50","--normal","#56c2d6","--high","#56c2d6", "--low", "#56c2d6"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%","--normal","#56c2d6","--high","#56c2d6", "--low", "#56c2d6"] 10
+                    , Run Swap ["--normal","#56c2d6","--high","#56c2d6", "--low", "#56c2d6"] 10
+                    , Run Com "uname" ["-s","-r"] "" 36000
+                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run StdinReader ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = "%cpu% | %memory% * %swap% | %eth0% }{ %LFPO% | %date%" }
+

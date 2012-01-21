@@ -1,0 +1,6 @@
+pics=(`ls $1`)
+while true
+do
+  feh --bg-scale ${dir}/${pics[$RANDOM % ${#pics[@]}]}
+  sleep 100
+done
