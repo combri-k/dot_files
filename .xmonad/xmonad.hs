@@ -68,8 +68,8 @@ myManageHook = ( composeAll . concat $
 -- Main {{{
 
 main = do
-    xmproc <- spawnPipe "/usr/bin/xmobar /home/kevin/.xmonad/conf/xmobar"
-    xmproc <- spawnPipe "/bin/bash /home/kevin/.xmonad/conf/autoload"
+    xmproc <- spawnPipe "/usr/bin/xmobar ~/.xmonad/conf/xmobar"
+    xmproc <- spawnPipe "/bin/bash ~/.xmonad/conf/autoload"
     xmonad $ defaultConfig {
         -- the basics
         terminal = myTerminal,
