@@ -1,5 +1,5 @@
 set autoread                                        " autoload files edited from the outside
-let mapleader = ","                                 " master key is now the comma (look for more informations)
+" let mapleader = ","                                 " master key is now the comma (look for more informations)
 autocmd! bufwritepost vimrc source ~/.vimrc         " autoload .vimrc when it's been modified
 set ruler                                           " always show current position
 set nowrap                                          " set no wrap (!)
@@ -14,8 +14,9 @@ set shiftwidth=2                                    " when entering a tab it's r
 set tabstop=2                                       " tabs are all replaced with two spaces
 set smartindent                                     " smart indent
 imap ii <esc>                                       " type ii instead of esc
-map <leader>tn :tabnew<cr>                          " comma plus t and n create a new tab
-map <leader>tc :tabclose<cr>                        " comma plus t and c close a tab
+map <leader>tn :tabnew<cr>                          " backslash plus t and n create a new tab
+map <leader>tc :tabclose<cr>                        " backslash plus t and c close a tab
+map <leader>n  :NERDTree<cr>                        " backslash plus n open NERDTree
 set laststatus=2                                    " always display the status line
 set list
 set listchars=eol:¬,trail:·,tab:»·
@@ -41,5 +42,6 @@ set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p
 call pathogen#infect()
 
 " nerdtree
-" autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree " autoload NERDTree
+
 " AND CHANGE THAT FREAKING DEFAULT THEME!
