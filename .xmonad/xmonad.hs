@@ -44,6 +44,7 @@ myKeysP = [ ("M-x g", spawn "google-chrome")
 myKeys :: [((ButtonMask, KeySym), X ())]
 myKeys = [ ((0, 0x1008ff11), spawn "amixer -q set Master 2dB+")
          , ((0, 0x1008ff13), spawn "amixer -q set Master 2dB-")
+         , ((0, 0xff61), spawn "gnome-screenshot")
          -- , ((0, 0xff65),     spawn "amixer -q set Master 2dB+")
          -- , ((0, 0xff66),     spawn "amixer -q set Master 2dB-")
          , ((0, 0x1008ff12), spawn "amixer -q set Master toggle") ]
