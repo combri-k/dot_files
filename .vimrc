@@ -22,10 +22,11 @@ set list
 set listchars=eol:¬,trail:·,tab:»·
 set number
 set mouse=a                                         " Enable mouse for a(ll)
+set wildmode=list:longest
 filetype plugin indent on                           " enable third party plugin autoindent
 
 " Refactore me:
-set statusline=%<%F%h%m%r%h%w%y\ %{&ff}\ %{strftime(\"%c\",getftime(expand(\"%:p\")))}%=\ lin:%l\,%L\ col:%c%V\ pos:%o\ asc
+set statusline=%F%y\ %=\ line:%l/%L\ column:%c
 " set statusline +=%1*\ %n\ %*            "buffer number
 " set statusline +=%5*%{&ff}%*            "file format
 " set statusline +=%3*%y%*                "file type
