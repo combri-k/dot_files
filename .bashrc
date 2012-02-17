@@ -32,7 +32,8 @@ source /home/ck/.git_bash_completion
 # PS1='${debian_chroot:+($debian_chroot)}\[\033[00;35m\]\u@\h\[\033[00m\]\033[01;30m@\033[00m\[\033[01;31m\]\w\[\033[00m\]\$ '
 # PS1="\u@\w~> "
 # PS1="${BPurple}See You Space Cowboy... ~>${C} "
-export PS1="${BRed}\t${C} ${BPurple}\w${C}${BCyan}$(__git_ps1 "@%s")${C}\n${BBlue}See You Space Cowboy... ~>${C} "
+export PS1="\[${BRed}\]\w\[${C}\]\$(__git_ps1 '#\[${BPurple}\]%s\[${C}\]')\n\[${BBlue}\]See You Space Cowboy... ~>\[${C}\] "
+# export PS1="${BRed}\t${C} ${BCyan}\w${C}\$(__git_ps1 '#${BPurple}%s${C}')\n${BBlue}See You Space Cowboy... ~>${C} "
 # export PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
 
 # aliases
